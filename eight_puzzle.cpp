@@ -270,7 +270,7 @@ double heuristic_t<2>::apply_heuristic(const state_t &state)
 // *****************************************************************************
 // *****************************************************************************
 // *****************************************************************************
-inline const state_t &get_goal_state()
+const state_t &get_goal_state()
 {
    static bool    initialized(false);
    static state_t the_goal;
@@ -302,8 +302,8 @@ inline const state_t &get_goal_state()
 // *****************************************************************************
 // *****************************************************************************
 // *****************************************************************************
-inline const std::vector<std::pair<row_idx_t, col_idx_t> >
-             &get_goal_tile_locations()
+const std::vector<std::pair<row_idx_t, col_idx_t> >
+      &get_goal_tile_locations()
 {
    static vector<pair<row_idx_t, col_idx_t> > goal_tile_locations;
    static bool                                initialized(false);
