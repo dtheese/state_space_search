@@ -37,14 +37,16 @@ namespace dct
       {
       }
 
-      node_t(): parent(NULL) {}
+      node_t()
+      {
+      }
 
-      STATE_T      state;
-      unsigned int depth;
-      double       g_cost;
-      double       h_cost;
-      const node_t *parent;        // Equals NULL for root node
-      OP_T         op;             // Meaningful only if parent != NULL
+      STATE_T      state{};
+      unsigned int depth{0};
+      double       g_cost{0.0};
+      double       h_cost{0.0};
+      const node_t *parent{nullptr};     // Equals NULL for root node
+      OP_T         op;                   // Meaningful only if parent != NULL
    };
 
    class null_repeated_state_checking_policy_t

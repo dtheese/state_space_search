@@ -19,7 +19,7 @@ class state_t
 {
    public:
       state_t() {}
-      state_t(const matrix_t &initial_state);
+      explicit state_t(const matrix_t &initial_state);
 
       unsigned int get_tile_at_location(row_idx_t r, col_idx_t c) const
       {

@@ -182,7 +182,7 @@ namespace dct
                 const std::queue<const node_t<STATE_T, OP_T> *> &nodes_to_expand
                                                         ) const;
 
-         unsigned int nodes_created;
+         unsigned int nodes_created{0};
    };
 
    // This class is used as a default template argument for the class template
